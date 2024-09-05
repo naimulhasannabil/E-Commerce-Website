@@ -33,6 +33,7 @@
            box-sizing: border-box;
            z-index: 1;
            border: 1px solid rgba(167, 158, 245, 0.1);
+           cursor: pointer;
         }
             .searchbox input {
                width: 90px;
@@ -314,6 +315,7 @@
                    font-weight: bold;
                    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
                    font-size: 1rem;
+                   cursor: pointer;
                 } 
                     .notifyB:hover {
                        background-color: #6b60ec;
