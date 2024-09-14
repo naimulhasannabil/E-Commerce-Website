@@ -3,11 +3,25 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
-    .container {
-       width: 100%;
-       height: 100vh;
-    }
+
+/* For larger screens (default styles) */
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo Section */
+.logo img {
+    width: 60%; /* Use percentage for responsive sizing */
+}
+
 /* logo Section */
 .logo {
     position: absolute;
@@ -329,4 +343,131 @@ footer {
     footer p {
        text-align: center;
        color: #f2f2f2;
+    }
+
+
+     /* Responsive Adjustments  */
+
+    /* For tablets (768px to 1024px) */
+@media (max-width: 1024px) {
+    .logo {
+        left: 20px; /* Adjust spacing */
+    }
+
+    .SearchArea {
+        right: 20px; /* Reduce spacing on right */
+        width: 150px;
+        height: 40px;
+    }
+
+    .section1 img {
+        height: 250px; /* Reduce image height */
+    }
+
+    .section1button h1,
+    .section1button h2 {
+        font-size: 3rem; /* Adjust font size */
+    }
+
+    .productbox {
+        width: 220px;
+        height: 300px;
+    }
+}
+    
+    /* For mobile devices (max-width: 767px) */
+    @media (max-width: 767px) {
+        .logo img {
+            width: 120px;
+        }
+        .SearchArea {
+            right: 10px;
+            width: 120px;
+            height: 35px;
+        }
+        .section1 {
+            flex-direction: column; /* Stack image and button vertically */
+        }
+        .section1 img {
+            height: 180px;
+        }
+        .section1button h1, .section1button h2 {
+            font-size: 2.5rem;
+            transform: translate(-50%, -150%);
+        }
+        .section1button {
+            position: relative;
+            margin-top: 20px; /* Adjust margin for small screens */
+        }
+        .section1button .btn {
+            width: 130px;
+            height: 35px;
+            transform: translate(-70%, -250%);
+        }
+        .productsection {
+            margin-top: 60px;
+        }
+
+    
+        .productbox {
+            width: 180px; /* Smaller boxes */
+            height: 270px;
+        }
+    
+        .about {
+            flex-direction: column; /* Stack about section */
+            align-items: center;
+        }
+    
+        .aboutbox {
+            width: 90%;
+            margin-bottom: 20px;
+        }
+    
+        .notifysearch {
+            width: 90%; /* Adjust the input form width */
+        }
+    }
+    
+    /* Media query for very small devices (max-width: 480px) */
+    @media (max-width: 480px) {
+        .logo img {
+            width: 50%; /* Adjust logo size */
+        }
+    
+        .section1 img {
+            height: 150px;
+        }
+    
+        .section1button h1,
+        .section1button h2 {
+            font-size: 1.5rem; /* Even smaller font */
+            transform: translate(-50%, -150%);
+        }
+    
+        .section1button {
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+        }
+        .productsection {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+        }
+    
+        .productbox {
+             margin-top: 300px; 
+             width: 180px; /* Smaller boxes */
+            height: 270px; 
+         } 
+        
+    
+        .notifysearch {
+            width: 80%;
+        }
+    
+        .iconArea {
+            left: 10px; /* Adjust social icons for smaller devices */
+        }
     }
